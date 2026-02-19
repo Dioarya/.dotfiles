@@ -249,6 +249,11 @@ require('lazy').setup({
 
       -- Useful for getting pretty icons, but requires a Nerd Font.
       { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
+
+      -- Git Extensions
+      'mrloop/telescope-git-branch.nvim',
+      'davvid/telescope-git-grep.nvim',
+      'cljoly/telescope-repo.nvim',
     },
     config = function()
       -- Telescope is a fuzzy finder that comes with a lot of different things that
@@ -305,6 +310,11 @@ require('lazy').setup({
       pcall(require('telescope').load_extension, 'fzf')
       pcall(require('telescope').load_extension, 'ui-select')
 
+      -- Load the git extensions
+      pcall(require('telescope').load_extension 'git_branch')
+      pcall(require('telescope').load_extension 'git_grep')
+      pcall(require('telescope').load_extension 'repo')
+
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
@@ -347,6 +357,19 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>gf', function()
         builtin.git_files()
       end, { desc = '[G]it [F]iles' })
+
+      -- Git Extension keys
+      vim.keymap.set('n', '<leader>gb', function()
+        require('telescope').extensions.git_branch.files()
+      end, { desc = 'Telescope Git Branches' })
+
+      vim.keymap.set('n', '<leader>gg', function()
+        require('telescope').extensions.git_grep.live_grep()
+      end, { desc = 'Telescope Git Live Grep' })
+
+      vim.keymap.set('n', '<leader>gr', function()
+        require('telescope').extensions.repo.list()
+      end, { desc = 'Telescope Git Repositories' })
     end,
   },
 
