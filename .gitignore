@@ -1,0 +1,11 @@
+*.log
+node_modules
+
+# Vim/Neovim swap files
+*.swo
+*.swp
+.netrwhist
+
+# Vim/Neovim
+.vim/colors
+.vim/plugged
