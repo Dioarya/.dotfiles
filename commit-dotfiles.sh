@@ -3,10 +3,10 @@
 pushd $DOTFILES
 pushd personal
 git add .
-git commit -m "autocommit personal dotfiles" --no-gpg-sign
+git commit -m "autocommit personal dotfiles"
 git push origin master
 popd
 git add .
-git commit -m "autocommit dotfiles" --no-gpg-sign
+git commit -m "autocommit dotfiles"
 git push origin master
 popd
