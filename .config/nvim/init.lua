@@ -574,6 +574,28 @@ require('lazy').setup({
         --     },
         --   },
         -- },
+        cssls = {
+          settings = {
+            css = {
+              validate = true,
+              lint = {
+                unknownAtRules = 'ignore',
+              },
+            },
+            less = {
+              validate = true,
+              lint = {
+                unknownAtRules = 'ignore',
+              },
+            },
+            scss = {
+              validate = true,
+              lint = {
+                unknownAtRules = 'ignore',
+              },
+            },
+          },
+        },
       }
 
       -- Ensure the servers and tools above are installed
@@ -1399,6 +1421,17 @@ ccc.setup {
 }
 
 vim.keymap.set('n', 'gC', '<cmd>CccPick<CR>')
+
+vim.api.nvim_create_autocmd('VimLeavePre', {
+  callback = function()
+    vim.fn.system 'prettierd stop'
+  end,
+})
+
+vim.o.shell = 'C:/msys64/usr/bin/bash.exe'
+vim.o.shellcmdflag = '-c'
+vim.o.shellquote = ''
+vim.o.shellxquote = ''
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
