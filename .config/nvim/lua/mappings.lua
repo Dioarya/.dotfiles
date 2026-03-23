@@ -1,4 +1,7 @@
 local map = vim.keymap.set
+local map_desc = function(mode, key, func, desc)
+  vim.keymap.set(mode, key, func, { noremap = true, silent = true, desc = desc })
+end
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 map("n", "<Esc>", "<cmd>nohlsearch<CR>")
@@ -53,3 +56,17 @@ map("n", "\\", function()
 end, { desc = "nvimtree reveal" })
 
 map("n", "gC", "<cmd>CccPick<CR>")
+
+map_desc(
+  "n",
+  "<leader>gcf",
+  ":lua require('neogen').generate({ type = 'func' })<cr>",
+  "neogen [g]enerate [f]unction jsdoc"
+)
+map_desc(
+  "n",
+  "<leader>gcc",
+  ":lua require('neogen').generate({ type = 'class' })<cr>",
+  "neogen [g]enerate [c]lass jsdoc"
+)
+map_desc("n", "<leader>gct", ":lua require('neogen').generate({ type = 'type' })<cr>", "neogen [g]enerate [t]ype jsdoc")

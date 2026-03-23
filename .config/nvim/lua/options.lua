@@ -74,9 +74,9 @@ opt.tabstop = 4
 opt.shiftwidth = 4
 
 -- Set folding
-opt.foldmethod = "expr"
-opt.foldexpr = "nvim_treesitter#foldexpr()"
-opt.foldlevel = 99
+-- opt.foldmethod = "expr"
+-- opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- opt.foldlevel = 99
 
 -- Set bash as default shell
 o.shell = "C:/msys64/usr/bin/bash.exe"
@@ -84,7 +84,7 @@ o.shellcmdflag = "-c"
 o.shellquote = ""
 o.shellxquote = ""
 
--- Add mason site
+-- Add :checkhealth nvim-treesitter site
 opt.runtimepath:append(vim.fn.stdpath "data" .. "/site")
 
 vim.diagnostic.config {
@@ -95,6 +95,8 @@ vim.diagnostic.config {
 }
 
 vim.filetype.add { extension = { ebnf = "ebnf" } }
+
+opt.rtp:append "C:\\msys64\\home\\User\\.local\\share\\nvim-data\\site\\parser\\"
 
 -- local o = vim.o
 -- o.cursorlineopt ='both' -- to enable cursorline!

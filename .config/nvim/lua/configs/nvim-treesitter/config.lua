@@ -1,4 +1,5 @@
 return function(_, opts)
+  require("nvim-treesitter.install").path = vim.fn.stdpath "data" .. "/site"
   -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
 
   -- Prefer git instead of curl in order to improve connectivity in some environments

@@ -26,6 +26,8 @@ require("lazy").setup({
   { import = "plugins" },
 }, lazy_config)
 
+vim.notify = require("fidget").notify
+
 require "managers.nvchadify"
 require "managers.unchadify"
 require "managers.runify" -- Main configs load from here
