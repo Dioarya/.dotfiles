@@ -3,4 +3,5 @@ return {
   ---@module 'roslyn.config'
   ---@type RoslynNvimConfig
   opts = require "configs.roslyn.opts",
+  ft = "cs",
 }

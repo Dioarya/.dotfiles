@@ -4,5 +4,5 @@ return {
   require "plugins.mason-tool-installer",
   { "j-hui/fidget.nvim", opts = {} },
   { "folke/neodev.nvim", opts = {} },
-  "hrsh7th/cmp-nvim-lsp",
+  -- "hrsh7th/cmp-nvim-lsp",
 }

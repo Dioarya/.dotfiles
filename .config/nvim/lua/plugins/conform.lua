@@ -1,6 +1,6 @@
 return {
   "stevearc/conform.nvim",
-  lazy = false,
+  event = "BufWritePre",
   keys = require "configs.conform.keys",
   opts = require "configs.conform.opts",
   config = function(_, opts)

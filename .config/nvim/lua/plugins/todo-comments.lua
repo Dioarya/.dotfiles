@@ -1,6 +1,6 @@
 return {
   "folke/todo-comments.nvim",
-  event = "VimEnter",
-  dependencies = { "nvim-lua/plenary.nvim" },
-  opts = { signs = false },
+  event = "BufReadPost",
+  dependencies = require "configs.todo-comments.deps",
+  opts = require "configs.todo-comments.opts",
 }

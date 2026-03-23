@@ -39,6 +39,9 @@ require("telescope").setup {
       "--smart-case",
       "-.",
     },
+    preview = {
+      treesitter = false,
+    },
   },
   -- pickers = {}
   extensions = {
