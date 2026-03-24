@@ -2,6 +2,9 @@ local opt = vim.opt
 local g = vim.g
 local o = vim.o
 
+-- Turn on 24-bit color
+opt.termguicolors = true
+
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 opt.hlsearch = true
 
