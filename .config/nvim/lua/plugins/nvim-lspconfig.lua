@@ -1,7 +1,7 @@
 return {
   "neovim/nvim-lspconfig",
-  dependencies = require "configs.nvim-lspconfig.deps",
+  dependencies = require "custom.configs.nvim-lspconfig.deps",
   config = function()
-    require "configs.nvim-lspconfig.config"
+    require "custom.configs.nvim-lspconfig.config"
   end,
 }

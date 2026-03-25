@@ -12,7 +12,7 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-local lazy_config = require "configs.lazy"
+local lazy_config = require "custom.configs.lazy"
 
 -- load plugins
 require("lazy").setup({
@@ -26,11 +26,11 @@ require("lazy").setup({
   { import = "plugins" },
 }, lazy_config)
 
-vim.notify = require("fidget").notify
+vim.notify = require("notify").notify
 
-require "managers.nvchadify"
-require "managers.unchadify"
-require "managers.runify" -- Main configs load from here
+require "custom.managers.nvchadify"
+require "custom.managers.unchadify"
+require "custom.managers.runify" -- Main configs load from here
 
 -- load theme
 dofile(vim.g.base46_cache .. "defaults")

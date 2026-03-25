@@ -1,6 +1,6 @@
 return {
   "folke/todo-comments.nvim",
   event = "BufReadPost",
-  dependencies = require "configs.todo-comments.deps",
-  opts = require "configs.todo-comments.opts",
+  dependencies = require "custom.configs.todo-comments.deps",
+  opts = require "custom.configs.todo-comments.opts",
 }

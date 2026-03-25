@@ -1,8 +1,8 @@
 return {
   "williamboman/mason.nvim",
   cmd = { "Mason", "MasonInstall", "MasonUpdate" },
-  opts = require "configs.mason.opts",
+  opts = require "custom.configs.mason.opts",
   config = function()
-    require "configs.mason.config"
+    require "custom.configs.mason.config"
   end,
 }

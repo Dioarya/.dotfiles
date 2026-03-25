@@ -2,6 +2,6 @@ return {
   "folke/which-key.nvim",
   event = "VimEnter",
   config = function()
-    require "configs.which-key"
+    require "custom.configs.which-key"
   end,
 }

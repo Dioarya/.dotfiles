@@ -1,10 +1,10 @@
 return {
   "AndrewRadev/switch.vim",
-  keys = require "configs.switch.keys",
+  keys = require "custom.configs.switch.keys",
   config = function()
-    require "configs.switch.config"
+    require "custom.configs.switch.config"
   end,
   init = function()
-    require "configs.switch.initfn"
+    require "custom.configs.switch.initfn"
   end,
 }

@@ -1,7 +1,5 @@
 return {
   "seblyng/roslyn.nvim",
-  ---@module 'roslyn.config'
-  ---@type RoslynNvimConfig
-  opts = require "configs.roslyn.opts",
+  opts = require "custom.configs.roslyn.opts",
   ft = "cs",
 }

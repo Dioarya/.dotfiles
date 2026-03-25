@@ -4,8 +4,8 @@ return {
   event = { "BufReadPost", "BufNewFile" },
   -- cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
   build = ":TSUpdate | TSInstallAll",
-  opts = require "configs.nvim-treesitter.opts",
+  opts = require "custom.configs.nvim-treesitter.opts",
   config = function(_, opts)
-    (require "configs.nvim-treesitter.config")(_, opts)
+    (require "custom.configs.nvim-treesitter.config")(_, opts)
   end,
 }

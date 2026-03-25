@@ -1,9 +1,9 @@
 return {
   "ThePrimeagen/harpoon",
   branch = "harpoon2",
-  keys = require "configs.harpoon.keys",
-  dependencies = require "configs.harpoon.deps",
+  keys = require "custom.configs.harpoon.keys",
+  dependencies = require "custom.configs.harpoon.deps",
   config = function()
-    require "configs.harpoon.config"
+    require "custom.configs.harpoon.config"
   end,
 }

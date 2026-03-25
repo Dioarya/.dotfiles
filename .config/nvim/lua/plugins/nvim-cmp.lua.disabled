@@ -1,8 +1,8 @@
 return {
   "hrsh7th/nvim-cmp",
   event = "InsertEnter",
-  dependencies = require "configs.cmp.deps",
+  dependencies = require "custom.configs.cmp.deps",
   config = function()
-    require "configs.cmp.config"
+    require "custom.configs.cmp.config"
   end,
 }

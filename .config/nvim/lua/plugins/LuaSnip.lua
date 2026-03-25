@@ -1,10 +1,10 @@
 return {
   "L3MON4D3/LuaSnip",
   event = "InsertEnter",
-  build = (require "configs.LuaSnip.build")(),
-  dependencies = require "configs.LuaSnip.deps",
-  opts = require "configs.LuaSnip.opts",
+  build = (require "custom.configs.LuaSnip.build")(),
+  dependencies = require "custom.configs.LuaSnip.deps",
+  opts = require "custom.configs.LuaSnip.opts",
   config = function(_, opts)
-    (require "configs.LuaSnip.config")(_, opts)
+    (require "custom.configs.LuaSnip.config")(_, opts)
   end,
 }

@@ -4,8 +4,8 @@ return { -- Fuzzy Finder (files, lsp, etc)
   event = "VeryLazy",
   branch = "0.1.x",
   cmd = "Telescope",
-  dependencies = require "configs.telescope.deps",
+  dependencies = require "custom.configs.telescope.deps",
   config = function()
-    require "configs.telescope.config"
+    require "custom.configs.telescope.config"
   end,
 }

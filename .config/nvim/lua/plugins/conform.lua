@@ -1,9 +1,9 @@
 return {
   "stevearc/conform.nvim",
   event = "BufWritePre",
-  keys = require "configs.conform.keys",
-  opts = require "configs.conform.opts",
+  keys = require "custom.configs.conform.keys",
+  opts = require "custom.configs.conform.opts",
   config = function(_, opts)
-    (require "configs.conform.config")(opts)
+    (require "custom.configs.conform.config")(opts)
   end,
 }

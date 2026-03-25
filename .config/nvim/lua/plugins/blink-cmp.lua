@@ -8,10 +8,10 @@ return {
     "saghen/blink.cmp",
     version = "1.*",
     event = { "InsertEnter", "CmdLineEnter" },
-    dependencies = require "configs.nvim-blink.deps",
-    opts_extend = require "configs.nvim-blink.opts_extend",
+    dependencies = require "custom.configs.nvim-blink.deps",
     opts = function()
-      return require "configs.nvim-blink.opts"
+      return (require "custom.configs.nvim-blink.opts")()
     end,
+    opts_extend = require "custom.configs.nvim-blink.opts_extend",
   },
 }
