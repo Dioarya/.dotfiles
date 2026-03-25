@@ -1,4 +1,5 @@
 return {
-  "lewis6991/gitsigns.nvim",
+  "Dioarya/gitsigns.nvim",
+  branch = "Dioarya-patch-1",
   opts = require "configs.gitsigns.opts",
 }

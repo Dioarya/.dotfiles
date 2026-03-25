@@ -1,13 +1,7 @@
 ---@type Gitsigns.config
 return {
+  current_line_blame = true,
   debug_mode = true,
-  signs = {
-    add = { text = "+" },
-    change = { text = "~" },
-    delete = { text = "_" },
-    topdelete = { text = "‾" },
-    changedelete = { text = "~" },
-  },
   auto_attach = true,
   on_attach = function(bufnr)
     local gitsigns = require "gitsigns"
