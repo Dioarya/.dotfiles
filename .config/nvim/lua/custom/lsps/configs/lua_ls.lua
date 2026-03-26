@@ -20,6 +20,7 @@ return {
             vim.fn.stdpath "data" .. "/lazy/roslyn.nvim/lua/roslyn/config.lua",
             vim.fn.stdpath "data" .. "/lazy/blink.cmp/lua/blink/cmp/config/types_partial.lua",
             vim.fn.stdpath "data" .. "/lazy/nvim-notify/lua/notify/config/init.lua",
+            vim.fn.stdpath "data" .. "/lazy/snacks.nvim/lua/snacks/init.lua",
             "${3rd}/luv/library",
           },
         },

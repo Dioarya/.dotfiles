@@ -26,7 +26,7 @@ return function()
       -- from nvchad/ui plugin
       -- exporting the ui config of nvchad blink menu
       -- helps non nvchad users
-      menu = require("nvchad.blink").menu,
+      menu = require "custom.configs.nvim-blink.menu",
     },
   }
 end

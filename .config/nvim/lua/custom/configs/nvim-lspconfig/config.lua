@@ -36,7 +36,7 @@ local x = vim.diagnostic.severity
 
 vim.diagnostic.config {
   virtual_text = { prefix = "" },
-  -- signs = { text = { [x.ERROR] = "󰅙", [x.WARN] = "", [x.INFO] = "󰋼", [x.HINT] = "󰌵" } },
+  signs = { text = { [x.ERROR] = "󰅙", [x.WARN] = "", [x.INFO] = "󰋼", [x.HINT] = "󰌵" } },
   underline = true,
   float = { border = "single" },
 }
@@ -44,15 +44,13 @@ vim.diagnostic.config {
 -- capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 capabilities = require("blink.cmp").get_lsp_capabilities(capabilities)
 
-local servers = require "custom.lsps"
+local servers = (require "custom.lsps").servers
 
 -- config is split into two: native vim.lsp.config() for servers managed by the native LSP API,
 -- and lspconfig setup() for everything else.
 
 for name, config in pairs(servers) do
-  if config.config then
-    vim.lsp.config(name, config.config)
-  end
+  vim.lsp.config(name, config.config or {})
 end
 
 local mason_lspconfig_opts = require "custom.configs.mason-lspconfig.opts"

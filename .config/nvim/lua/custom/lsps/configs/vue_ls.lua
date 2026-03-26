@@ -1,3 +1,1 @@
-return {
-  config = {},
-}
+return {}
