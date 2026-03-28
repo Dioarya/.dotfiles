@@ -61,20 +61,10 @@ end, { desc = "nvimtree reveal" })
 
 map("n", "gC", "<cmd>CccPick<CR>")
 
-map_desc(
-  "n",
-  "<leader>gcf",
-  ":lua require('neogen').generate({ type = 'func' })<cr>",
-  "neogen [g]enerate [f]unction jsdoc"
-)
-map_desc(
-  "n",
-  "<leader>gcc",
-  ":lua require('neogen').generate({ type = 'class' })<cr>",
-  "neogen [g]enerate [c]lass jsdoc"
-)
-map_desc("n", "<leader>gct", ":lua require('neogen').generate({ type = 'type' })<cr>", "neogen [g]enerate [t]ype jsdoc")
+map_desc("n", "<leader>gcf", ":lua require('neogen').generate({ type = 'func' })<cr>", "neogen [g]enerate [f]unction")
+map_desc("n", "<leader>gcc", ":lua require('neogen').generate({ type = 'class' })<cr>", "neogen [g]enerate [c]lass")
+map_desc("n", "<leader>gct", ":lua require('neogen').generate({ type = 'type' })<cr>", "neogen [g]enerate [t]ype")
 
-map_desc("n", "ZS", "<CMD>w<CR>", "Save buffer")
+map("n", "ZS", "<CMD>w<CR>")
 
-map_desc("n", "ZA", "<CMD>wa<CR>", "Save all buffer")
+map("n", "ZA", "<CMD>wa<CR>")

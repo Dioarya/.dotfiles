@@ -93,7 +93,7 @@ return function(_, opts)
             for _, info in ipairs(packages_to_install) do
               table.insert(names, info.lspconfig)
             end
-            vim.notify("Installing " .. table.concat(names, ", "), "info", {
+            vim.notify("Installing " .. table.concat(names, ", "), vim.log.levels.INFO, {
               title = snacks_notification_title,
               style = snacks_notification_style,
               timeout = snacks_notification_timeout,
@@ -109,7 +109,7 @@ return function(_, opts)
             for _, info in ipairs(unknown_packages) do
               table.insert(unknown_names, info.lspconfig)
             end
-            vim.notify("Unknown " .. table.concat(unknown_names, ", "), "warn", {
+            vim.notify("Unknown " .. table.concat(unknown_names, ", "), vim.log.levels.WARN, {
               title = snacks_notification_title,
               style = snacks_notification_style,
               timeout = snacks_notification_timeout,

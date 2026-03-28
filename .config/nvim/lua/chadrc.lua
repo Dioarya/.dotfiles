@@ -17,7 +17,7 @@ M.base46 = {
 }
 
 M.nvdash = {
-  enabled = false, -- Replaced with snacks.nvim
+  enabled = false, -- Replaced with snacks.nvim's dashboard
   -- load_on_startup = true,
 }
 
