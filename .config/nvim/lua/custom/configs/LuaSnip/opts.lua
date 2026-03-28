@@ -1,1 +1,4 @@
-return { history = true, updateevents = "TextChanged,TextChangedI" }
+return {
+  history = true,
+  updateevents = "TextChanged,TextChangedI",
+}

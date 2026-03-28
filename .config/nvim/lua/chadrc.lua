@@ -16,7 +16,10 @@ M.base46 = {
   -- },
 }
 
-M.nvdash = { load_on_startup = true }
+M.nvdash = {
+  enabled = false, -- Replaced with snacks.nvim
+  -- load_on_startup = true,
+}
 
 M.ui = {
   tabufline = {

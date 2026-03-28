@@ -1,4 +1,4 @@
-local config = function(opts)
+return function(_, opts)
   require("conform").setup(opts)
 
   vim.api.nvim_create_user_command("FormatDisable", function(args)
@@ -21,5 +21,3 @@ local config = function(opts)
     desc = "Re-enable autoformat-on-save",
   })
 end
-
-return config

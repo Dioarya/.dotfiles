@@ -1,6 +1,6 @@
 ---@type Gitsigns.config
 return {
-  -- current_line_blame = true,
+  current_line_blame = true,
   debug_mode = true,
   auto_attach = true,
   on_attach = function(bufnr)

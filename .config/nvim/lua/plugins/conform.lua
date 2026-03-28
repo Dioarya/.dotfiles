@@ -3,7 +3,5 @@ return {
   event = "BufWritePre",
   keys = require "custom.configs.conform.keys",
   opts = require "custom.configs.conform.opts",
-  config = function(_, opts)
-    (require "custom.configs.conform.config")(opts)
-  end,
+  config = require "custom.configs.conform.config",
 }

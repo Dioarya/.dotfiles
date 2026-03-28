@@ -7,8 +7,12 @@ end
 map("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Diagnostic keymaps
-map("n", "[d", function() vim.diagnostic.jump({ count = -1 }) end, { desc = "Go to previous [D]iagnostic message" })
-map("n", "]d", function() vim.diagnostic.jump({ count = 1 }) end, { desc = "Go to next [D]iagnostic message" })
+map("n", "[d", function()
+  vim.diagnostic.jump { count = -1 }
+end, { desc = "Go to previous [D]iagnostic message" })
+map("n", "]d", function()
+  vim.diagnostic.jump { count = 1 }
+end, { desc = "Go to next [D]iagnostic message" })
 map("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
 map("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
@@ -70,3 +74,7 @@ map_desc(
   "neogen [g]enerate [c]lass jsdoc"
 )
 map_desc("n", "<leader>gct", ":lua require('neogen').generate({ type = 'type' })<cr>", "neogen [g]enerate [t]ype jsdoc")
+
+map_desc("n", "ZS", "<CMD>w<CR>", "Save buffer")
+
+map_desc("n", "ZA", "<CMD>wa<CR>", "Save all buffer")

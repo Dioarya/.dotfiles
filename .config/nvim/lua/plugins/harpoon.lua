@@ -3,7 +3,5 @@ return {
   branch = "harpoon2",
   keys = require "custom.configs.harpoon.keys",
   dependencies = require "custom.configs.harpoon.deps",
-  config = function()
-    require "custom.configs.harpoon.config"
-  end,
+  config = require "custom.configs.harpoon.config",
 }
