@@ -4,4 +4,5 @@ return {
   lazy = false,
   opts = require "custom.configs.snacks.opts",
   config = require "custom.configs.snacks.config",
+  keys = require "custom.configs.snacks.keys",
 }

@@ -68,3 +68,5 @@ map_desc("n", "<leader>gct", ":lua require('neogen').generate({ type = 'type' })
 map("n", "ZS", "<CMD>w<CR>")
 
 map("n", "ZA", "<CMD>wa<CR>")
+
+map("n", "ZX", "<CMD>q<CR>")

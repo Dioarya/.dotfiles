@@ -195,13 +195,14 @@ return {
   update_focused_file = {
     enable = true,
     update_root = {
-      enable = true,
+      enable = false,
     },
   },
   git = {
     enable = true,
     cygwin_support = true,
     show_on_open_dirs = false,
+    timeout = 5000,
   },
   diagnostics = {
     enable = true,

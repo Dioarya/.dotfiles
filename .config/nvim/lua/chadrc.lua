@@ -27,8 +27,9 @@ M.ui = {
     lazyload = false,
   },
 
-  telecope = {
-    style = "bordered",
+  statusline = {
+    enabled = true,
+    separator_style = "block",
   },
 }
 

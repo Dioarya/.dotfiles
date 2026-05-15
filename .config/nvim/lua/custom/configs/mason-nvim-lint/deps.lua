@@ -1,4 +1,4 @@
 return {
-  "williamboman/mason.nvim",
-  "mfussenegger/nvim-lint",
+  require "plugins.mason",
+  require "plugins.nvim-lint",
 }

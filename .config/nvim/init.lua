@@ -26,6 +26,13 @@ require("lazy").setup({
   { import = "plugins" },
 }, lazy_config)
 
+-- if vim.fn.has "win32" == 1 and not vim.fn.has "wsl" == 1 then
+--   -- check we're native windows, not MSYS2
+--   if os.getenv "MSYSTEM" == nil then
+--     vim.env.PATH = "C:/msys64/ucrt64/bin;C:/msys64/usr/bin;" .. vim.env.PATH
+--   end
+-- end
+
 require "custom.managers.nvchadify"
 require "custom.managers.unchadify"
 require "custom.managers.runify" -- Main configs load from here

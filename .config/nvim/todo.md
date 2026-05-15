@@ -1,4 +1,57 @@
+List of todos in no particular order.
+- [x] Migrate to snacks.picker from telescope
+- [x] Add snacks.nvim's git and gh integration
+- [ ] Migrate to snacks.explorer from nvim-tree
+- [ ] Configure/Test/Try out all snacks modules
+  - [x] animate
+  - [x] bigfile
+  - [x] bufdelete
+  - [x] dashboard
+  - [ ] debug
+  - [ ] dim
+  - [ ] explorer
+  - [ ] gh
+  - [ ] git
+  - [ ] gitbrowse
+  - [ ] image
+  - [ ] indent
+  - [ ] input
+  - [ ] keymap
+  - [ ] layout
+  - [ ] lazygit
+  - [ ] notifier
+  - [ ] notify
+  - [ ] picker
+  - [ ] profiler
+  - [ ] quickfile
+  - [ ] rename
+  - [ ] scope
+  - [ ] scratch
+  - [ ] scroll
+  - [ ] statuscolumn
+  - [ ] terminal
+  - [ ] toggle
+  - [ ] util
+  - [ ] win
+  - [ ] words
+  - [ ] zen
+- [ ] Add DAP
+- [ ] Deprecate all notify plugins except snacks.notifier
+- [ ] Remove all disabled plugins from the filesystem
+- [x] Rename any plugins that are not named literally their git repo #1
+- [ ] Move any single file configuration to a folder instead #1
+- [ ] Move all plugin configurations to be inside a folder in plugins/ instead, merging with the declaration #2
+- [x] Fix MYPY linting
+- [x] Fix markdownlint linting
+- [x] Fix keybinds with snacks lspconfig lsp config keys (???)
+- [x] Rewrite custom.lsps language keys to be ftplugin filetypes
+- [ ] Upgrade to blink-cmp V2
+- [ ] Separate out lsps.configs to be a folder containing configurations for each type server/formatter/linter/dap for packages that can be all (oxlint, stylelint)
+- [ ] Automatically set Conform's formatters_by_ft table with custom.lsps.formatters (gotta support stop_after_first = true)
+- [ ] When prettier configurations are detected, use prettier, otherwise, use oxfmt
+- [ ] Add a configuration to be able to disable mason autoinstalling and remind the user to install it using another package manager if it's not found to be installed
+- [ ] Add a configuration for deprecated packages that point to the same lspconfig configuration to be able to use the correct lspconfig configuration but download the correct mason package (stylelint_lsp lspconfig but stylelint-language-server mason package)
 
-- [ ] Migrate to snacks.picker from telescope
-- [ ] Add snacks.nvim's git and gh integration
-- [ ] 
+#1 VS #2
+#1 31% [###       ]
+#2 69% [#######   ]

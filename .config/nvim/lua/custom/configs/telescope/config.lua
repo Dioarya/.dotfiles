@@ -104,14 +104,14 @@ vim.keymap.set("n", "<leader>gf", function()
 end, { desc = "[G]it [F]iles" })
 
 -- Git Extension keys
-vim.keymap.set("n", "<leader>gb", function()
-  require("telescope").extensions.git_branch.files()
-end, { desc = "Telescope Git Branches" })
-
-vim.keymap.set("n", "<leader>gg", function()
-  require("telescope").extensions.git_grep.live_grep()
-end, { desc = "Telescope Git Live Grep" })
-
-vim.keymap.set("n", "<leader>gr", function()
-  require("telescope").extensions.repo.list()
-end, { desc = "Telescope Git Repositories" })
+-- vim.keymap.set("n", "<leader>gb", function()
+--   require("telescope").extensions.git_branch.files()
+-- end, { desc = "Telescope Git Branches" })
+--
+-- vim.keymap.set("n", "<leader>gg", function()
+--   require("telescope").extensions.git_grep.live_grep()
+-- end, { desc = "Telescope Git Live Grep" })
+--
+-- vim.keymap.set("n", "<leader>gr", function()
+--   require("telescope").extensions.repo.list()
+-- end, { desc = "Telescope Git Repositories" })

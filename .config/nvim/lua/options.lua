@@ -81,25 +81,46 @@ opt.shiftwidth = 4
 -- opt.foldexpr = "nvim_treesitter#foldexpr()"
 -- opt.foldlevel = 99
 
+-- Correctly set o.shell* flags on different default shells
+local default_shell = vim.fs.basename(vim.fs.normalize(o.shell))
+if string.sub(default_shell, 1, string.len "bash") == "bash" then
+  o.shellcmdflag = "-c"
+  o.shellxquote = ""
+else
+end
+
 -- Set bash as default shell
-o.shell = "C:/msys64/usr/bin/bash.exe"
-o.shellcmdflag = "-c"
-o.shellquote = ""
-o.shellxquote = ""
+-- o.shell = "C:/msys64/usr/bin/bash.exe"
+-- o.shellcmdflag = "-c"
+-- o.shellquote = ""
+-- o.shellxquote = ""
+
+-- Set cmd as default shell
+-- o.shell = "cmd.exe"
+-- o.shellcmdflag = "/s /c"
+-- o.shellquote = ""
+-- o.shellxquote = '"'
 
 -- Add :checkhealth nvim-treesitter site
 opt.runtimepath:append(vim.fn.stdpath "data" .. "/site")
 
-vim.diagnostic.config {
-  virtual_text = true,
-  signs = true,
-  underline = true,
-  update_in_insert = true,
-}
-
 vim.filetype.add { extension = { ebnf = "ebnf" } }
 
 opt.rtp:append "C:\\msys64\\home\\User\\.local\\share\\nvim-data\\site\\parser\\"
+
+local x = vim.diagnostic.severity
+
+vim.diagnostic.config {
+  virtual_text = { prefix = "", source = "if_many" },
+  float = {
+    source = true,
+    border = "rounded",
+  },
+  signs = { text = { [x.ERROR] = "󰅙", [x.WARN] = "", [x.INFO] = "󰋼", [x.HINT] = "󰌵" } },
+  underline = true,
+  update_in_insert = true,
+  severity_sort = true,
+}
 
 -- local o = vim.o
 -- o.cursorlineopt ='both' -- to enable cursorline!
